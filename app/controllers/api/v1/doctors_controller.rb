@@ -27,5 +27,7 @@ class Api::V1::DoctorsController < ApplicationController
   def set_doctor
     @doctor = Doctor.find(params[:id])
   end
-  
+  def doctor_params
+    params.require(:doctor).permit(:name, :specialization, :bio, :image, :fee)
+  end  
 end
