@@ -23,5 +23,5 @@ class Api::V1::DoctorsController < ApplicationController
     @doctor.destroy
     head :no_content
   end
-  
+  private
 end
