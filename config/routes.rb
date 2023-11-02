@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       resources :users do
         resources :reservations
       end
+      resources :doctors
       # Add more resources for other controllers if needed
     end
   end
