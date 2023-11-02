@@ -24,4 +24,8 @@ class Api::V1::DoctorsController < ApplicationController
     head :no_content
   end
   private
+  def set_doctor
+    @doctor = Doctor.find(params[:id])
+  end
+  
 end
