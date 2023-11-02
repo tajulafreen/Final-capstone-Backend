@@ -4,5 +4,13 @@ class Api::V1::DoctorsController < ApplicationController
     @doctors = Doctor.all
     render json: @doctors
   end
+  def create
+    @doctor = Doctor.new(doctor_params)
+    if @doctor.save
+      render json: @doctor, status: :created
+    else
+      render json: @doctor.errors, status: :unprocessable_entity
+    end
+  end
   
 end
