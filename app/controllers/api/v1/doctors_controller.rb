@@ -12,5 +12,12 @@ class Api::V1::DoctorsController < ApplicationController
       render json: @doctor.errors, status: :unprocessable_entity
     end
   end
+  def update
+    if @doctor.update(doctor_params)
+      render json: @doctor
+    else
+      render json: @doctor.errors, status: :unprocessable_entity
+    end
+  end
   
 end
