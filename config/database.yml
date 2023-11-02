@@ -18,8 +18,8 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: postgres
-  password: Pa$$w0rd
+  username: dee
+  password: Bbik244
  
 development:
   <<: *default
@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: final_capstone_backend_production
-  username: final_capstone_backend
-  password: <%= ENV["FINAL_CAPSTONE_BACKEND_DATABASE_PASSWORD"] %>
+  username: dee
+  password: Bbik244
