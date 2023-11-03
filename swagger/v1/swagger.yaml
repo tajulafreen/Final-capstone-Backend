@@ -1,0 +1,162 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/doctors":
+    post:
+      summary: create new doctor
+      tags:
+      - Doctors
+      parameters: []
+      responses:
+        '200':
+          description: Doctor created
+        '400':
+          description: Invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                specialization:
+                  type: string
+                image:
+                  type: string
+                fee:
+                  type: decimal
+              required:
+              - name
+              - specialization
+              - fee
+              - image
+    get:
+      summary: fetches all doctors
+      tags:
+      - doctors
+      responses:
+        '200':
+          description: list of doctors
+  "/api/v1/doctors/{doctor_id}":
+    get:
+      summary: retrieves a single doctor
+      tags:
+      - doctor
+      parameters:
+      - name: doctor_id
+        in: path
+        required: true
+      responses:
+        '200':
+          description: doctor retrieved
+    delete:
+      summary: deletes a single doctor
+      tags:
+      - doctor
+      parameters:
+      - name: doctor_id
+        in: path
+        required: true
+      responses:
+        '204':
+          description: doctor deleted
+  "/api/v1/users/{user_id}/reservations":
+    post:
+      summary: creates a new reservation
+      tags:
+      - " creates a reservation"
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Reservation created
+        '404':
+          description: User not found
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                city:
+                  type: string
+                date:
+                  type: string
+                doctor_id:
+                  type: interger
+                user_id:
+                  type: interger
+              required:
+              - city
+              - date
+              - doctor_id
+              - user_id
+        required: true
+    get:
+      summary: retrieves all reservations
+      tags:
+      - reservations
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: reservations retrieved
+  "/sign_up":
+    post:
+      summary: create new user
+      tags:
+      - Users
+      parameters: []
+      responses:
+        '200':
+          description: User created successfuly
+        '422':
+          description: validation error
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+              required:
+              - name
+  "/login":
+    post:
+      summary: Log in a user
+      tags:
+      - Users
+      parameters: []
+      responses:
+        '200':
+          description: user logged in successfully
+        '404':
+          description: user not found
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+              required:
+              - name
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com
