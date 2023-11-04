@@ -5,6 +5,10 @@ class Api::V1::DoctorsController < ApplicationController
     render json: @doctors
   end
 
+  def show
+    render json: @doctor
+  end
+
   def create
     @doctor = Doctor.new(doctor_params)
     if @doctor.save
