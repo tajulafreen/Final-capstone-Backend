@@ -25,6 +25,16 @@ class Api::V1::ReservationsController < ApplicationController
   end
 
   def update
+    @reservation = Reservation.find(params[:id])
+    if @reservation.update(reservation_params)
+      render json: {
+        status: { code: 200, message: 'Reservation updated successfully', data: @reservation }
+      }, status: :ok
+    else
+      render json: {
+        status: { code: 400, message: 'Failed to update reservation', errors: @reservation.errors.full_messages }
+      }, status: :bad_request
+    end
   end
 
   def destroy
