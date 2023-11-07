@@ -1,4 +1,4 @@
-# (Final Capstone)
+# Doctor appointment (Final Capstone)
 
 <a id="readme-top"></a>
 
