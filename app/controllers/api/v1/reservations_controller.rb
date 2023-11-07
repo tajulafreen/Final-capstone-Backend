@@ -47,5 +47,10 @@ private
 
   def reservation_params
     params.require(:reservation).permit(:user_id, :doctor_id, :city, :date)
+  end 
+
+  def set_user
+    @user = User.find_by(id: reservation_params[:user_id])
+    render json: { error: 'User not found' }, status: :not_found if @user.nil?
   end
 end
