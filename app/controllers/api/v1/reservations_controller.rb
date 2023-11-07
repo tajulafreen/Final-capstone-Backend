@@ -53,4 +53,11 @@ private
     @user = User.find_by(id: reservation_params[:user_id])
     render json: { error: 'User not found' }, status: :not_found if @user.nil?
   end
+
+  def set_doctor
+    @doctor = Doctor.find_by(id: reservation_params[:doctor_id])
+    return unless @doctor.nil?
+
+    render json: { error: 'Doctor not found' }, status: :not_found
+  end
 end
