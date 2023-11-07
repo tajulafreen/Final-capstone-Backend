@@ -11,6 +11,17 @@ class Api::V1::ReservationsController < ApplicationController
   end
 
   def create
+    @reservation = Reservation.new(reservation_params)
+
+    if @reservation.save
+      render json: {
+        status: { code: 200, message: 'Reservation created successfully', data: @reservation }
+      }, status: :ok
+    else
+      render json: {
+        status: { code: 400, message: 'Failed to create reservation', errors: @reservation.errors.full_messages }
+      }, status: :bad_request
+    end
   end
 
   def update
