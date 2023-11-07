@@ -1,4 +1,4 @@
-# Hotel Hub (Final Capstone)
+# (Final Capstone)
 
 <a id="readme-top"></a>
 
@@ -197,7 +197,7 @@ rspec ./spec/requests/api/v1
 <!-- AUTHORS -->
 ## 👥 Authors <a id="authors"></a>  
  
-👤 **Abel Morara**
+👤 **Tajul Afreen**
 - GitHub: [@githubhandle](https://github.com/tajulafreen)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/tajul-afreen/)
  
