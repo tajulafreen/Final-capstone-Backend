@@ -42,4 +42,10 @@ class Api::V1::ReservationsController < ApplicationController
     @reservation.destroy
     head :no_content
 end
+
+private
+
+  def reservation_params
+    params.require(:reservation).permit(:user_id, :doctor_id, :city, :date)
+  end
 end
