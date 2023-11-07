@@ -42,3 +42,4 @@ class Api::V1::ReservationsController < ApplicationController
     @reservation.destroy
     head :no_content
 end
+end
