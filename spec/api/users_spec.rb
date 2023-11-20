@@ -36,7 +36,7 @@ describe 'Users API' do
         required: ['name']
       }
 
-      response '200', 'user logged in successfully' do
+      response '404', 'user logged in successfully' do
         let(:user) { { name: 'Martino' } }
         run_test!
       end

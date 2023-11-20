@@ -10,10 +10,10 @@ Rails.application.routes.draw do
   # Nested routes for users and their reservations
   namespace :api do
     namespace :v1 do
-      # get 'reservations/index'
-      # get 'reservations/create'
-      # get 'reservations/update'
-      # get 'reservations/destroy'
+      get 'reservations/index'
+      get 'reservations/create'
+      get 'reservations/update'
+      get 'reservations/destroy'
       resources :users do
         resources :reservations
       end

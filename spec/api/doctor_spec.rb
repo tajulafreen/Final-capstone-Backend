@@ -11,7 +11,7 @@ describe 'Doctors API' do
         },
         required: %w[name specialization fee image]
       }
-      response '200', 'Doctor created' do
+      response '201', 'Doctor created' do
         let(:doctor) do
           {
             name: 'Dr.Smith', image: 'https://example.com/john-smith.jpg',
@@ -21,7 +21,7 @@ describe 'Doctors API' do
         end
         run_test!
       end
-      response '400', 'Invalid request' do
+      response '422', 'Invalid request' do
         let(:doctor) do
           {
             name: '',
