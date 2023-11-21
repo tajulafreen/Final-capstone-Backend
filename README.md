@@ -158,28 +158,8 @@ or
 ./bin/dev
 ```
 
-- You can use the following emails and passwords from seeded data to login from the frontend.
 
-for admin
-```
-user1 = User.create(
-  name: 'John Doe',
-  email: 'john@example.com',
-  password: 'password123',
-  role: 'admin'
-)
 
-```
-for a Normal User
-
-```
-user2 = User.create(
-  name: 'Jane Smith',
-  email: 'jane@example.com',
-  password: 'password456',
-  role: 'user'
-)
-```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ###  Tests <a id="run-tests"></a>
@@ -187,8 +167,8 @@ user2 = User.create(
 To run the tests for models and requests, execute the following command:
 
 ```
-rspec ./spec/models
-rspec ./spec/requests/api/v1
+
+rspec ./spec/api/v1
 
 ```
  
@@ -202,10 +182,6 @@ rspec ./spec/requests/api/v1
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/tajul-afreen/)
  
 
-👤 **Foga Kater Amos**
-
-- GitHub: [@katfogy](https://github.com/katfogy)
-- LinkedIn: [foga](https://www.linkedin.com/in/foga/)
 
 👤 **Diana Beki**
 
@@ -213,9 +189,6 @@ rspec ./spec/requests/api/v1
 - LinkedIn: [Diana Beki](https://www.linkedin.com/in/diana-beki-b49684230/)
 
 
-👤 **Kiko**
-
-- GitHub: [@kit0-0](https://github.com/kit0-0)
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
