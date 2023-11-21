@@ -38,6 +38,8 @@ Backend is implement as API-only. The front end is implemented utilizing the Rea
 -  The doctor controller provides an `index` method to get all the data for doctors, and a `show` method to get details about a specific doctor. The `destroy` method deactivates the doctor when the user sends a delete query by clicking on delete.
 
 -  The reservation controller also provides `index` methods. Index is used to get a list of all reservations made. 
+
+#### Link to [FRONTEND](https://github.com/tajulafreen/Final-capstone-Frontend/pull/13)
  
 ## 🛠 Built With <a id="built-with"></a>
 
