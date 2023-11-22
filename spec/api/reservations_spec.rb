@@ -16,7 +16,8 @@ describe 'Reservations API ' do
         let(:doctor) { Doctor.create(name: 'Dr. John Doe', specialization: 'Cardiologist', image: 'https://example.com/doctor.jpg', fee: 150.00, bio: 'Experienced cardiologist with 10+ years of practice.') }
         let(:doctor_id) { doctor.id }
         let(:reservation) do
-          { city: 'New york', date: '2023-11-01', user_id:, doctor_id: }
+          { city: 'New York', date: (Date.today + 1).to_s, user_id: user_id, doctor_id: doctor_id }
+          # Update the 'date' field to a future date, for example, Date.today + 1 for one day ahead
         end
         run_test!
       end
