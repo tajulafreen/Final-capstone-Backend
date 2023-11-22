@@ -17,7 +17,6 @@ describe 'Reservations API ' do
         let(:doctor_id) { doctor.id }
         let(:reservation) do
           { city: 'New York', date: (Date.today + 1).to_s, user_id: user_id, doctor_id: doctor_id }
-          # Update the 'date' field to a future date, for example, Date.today + 1 for one day ahead
         end
         run_test!
       end
