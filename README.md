@@ -29,7 +29,7 @@
 
 # 📖 Doctor appointment (Backend) <a id="about-project"></a>
 
-**Doctor appointment** The Doctor Appointment app is a user-friendly platform designed to facilitate the process of scheduling and managing medical appointments. Whether you're seeking consultations, check-ups, or specialized medical services, this application provides a seamless interface to connect patients with healthcare providers.
+[DoctorsAPPointments] This is an API rails backend app that allows users to sign up and login into the app allows user to book an appointment with available doctors or create new doctors
 
 Backend is implement as API-only. The front end is implemented utilizing the React framework.
 
