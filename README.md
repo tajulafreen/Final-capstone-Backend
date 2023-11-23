@@ -68,7 +68,7 @@ Backend is implement as API-only. The front end is implemented utilizing the Rea
 
 ## 🚀 Live Demo <a id="live-demo"></a>
 
-Live demo for the website [Coming Soon]().
+- [Live link](https://doctor-appointment-wk9j.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
